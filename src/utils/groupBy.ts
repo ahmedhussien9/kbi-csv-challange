@@ -1,8 +1,8 @@
-import Product from "../models/product.model";
+import Product from "../classes/product";
 
 /**
  *
- * @param list
+ * @param products
  * @param keyGetter
  * Mapper (product: Product) => product.name //
  * each group name such as 'shoes' and 'forks' which is the name of the product
@@ -10,15 +10,16 @@ import Product from "../models/product.model";
  *'shoes' => [ { brand: 'Air' }, { brand: 'Air' }, { brand: 'BonPied' } ],
  *'forks' => [ { brand: 'Pfitzcraft' } ]
  */
-export default function (products: Product[], keyGetter) {
+
+export default function groupBy(products: Product[], keyGetter, groupByKey: string) {
   const map = new Map();
   products.forEach((item: Product) => {
     const key = keyGetter(item);
     const collection = map.get(key);
     if (!collection) {
-      map.set(key, [{ brand: item.brand }]);
+      map.set(key, [{ [groupByKey]: item[groupByKey] }]);
     } else {
-      collection.push({ brand: item.brand });
+      collection.push({ [groupByKey]: item[groupByKey] });
     }
   });
   return map;

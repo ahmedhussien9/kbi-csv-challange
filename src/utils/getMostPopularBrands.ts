@@ -1,20 +1,11 @@
-import Product from "../models/product.model";
+import Product from "../classes/product";
 import groupBy from "./groupBy";
-import groupUniqueProducts from "./groupUniqueProducts";
-import getMostPopularBrand from "./popularBrand";
-
-interface IGroupProductByBrandName {
-  [key: string]: Ibrand[];
-}
-
-interface Ibrand {
-  brand: string;
-}
-
-interface MostPopularBrand {
-  name: string;
-  brand: string;
-}
+import groupUniqueProducts from "./getUniqueListByKeyIdentifer";
+import getMostPopularBrand from "./getBrandName";
+import {
+  IGroupProductByBrandName,
+  MostPopularBrand,
+} from "../interfaces/IBrand.interface";
 
 export default function mostPopularBrands(products: Product[]) {
   const productsNames = groupUniqueProducts(
@@ -25,12 +16,14 @@ export default function mostPopularBrands(products: Product[]) {
   let brands: MostPopularBrand[] = [];
   let grpPrdByBrandNam = {};
   let grpPrdsByTheirBrands = new Map();
+  let groupByKey = "brand";
 
   for (let index = 0; index < productsNames.length; index++) {
     const prdName: string = productsNames[index];
     grpPrdsByTheirBrands = groupBy(
       products,
-      (product: Product) => product.name
+      (product: Product) => product.name,
+      groupByKey
     ); // Map(2) {'shoes' => [ { brand: 'Air' }, { brand: 'Air' }, { brand: 'BonPied' } ],'forks' => [ { brand: 'Pfitzcraft' } ]}
     grpPrdByBrandNam[prdName] = grpPrdsByTheirBrands.get(
       prdName
