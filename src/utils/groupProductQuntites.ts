@@ -1,12 +1,12 @@
-import Product from "../models/product.model";
+import Product from "../classes/product";
 
-export interface IProductGroup {
+export interface IProductQuantitesGroup {
   [key: string]: number[];
 }
 
-export default function groupProductQuntities(
+export default function groupProductQuantites(
   products: Product[]
-): IProductGroup[] {
+): IProductQuantitesGroup[] {
   return products.reduce((a: any, e: Product) => {
     if (!a[e.name]) {
       a[e.name] = [];

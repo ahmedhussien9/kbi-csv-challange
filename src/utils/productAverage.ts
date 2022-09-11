@@ -1,7 +1,12 @@
-import { IProductGroup } from "./groupProductQuntites";
-
-export default function productsAverages(
-  groupOfProductQuntites: IProductGroup[],
+import { IProductQuantitesGroup } from "./groupProductQuntites";
+/**
+ *
+ * @param groupOfProductQuntites
+ * @param totalRecords
+ * @returns
+ */
+export default function (
+  groupOfProductQuntites: IProductQuantitesGroup[],
   totalRecords: number
 ) {
   return Object.fromEntries(

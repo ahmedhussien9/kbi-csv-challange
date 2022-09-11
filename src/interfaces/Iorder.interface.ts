@@ -1,4 +1,5 @@
-import Product from "../models/product.model";
+import Product from "../classes/product";
 export interface IOrder {
-    order: Product[];
+  order: Product[];
+  getProductsQuantitesAverage: () => void;
 }

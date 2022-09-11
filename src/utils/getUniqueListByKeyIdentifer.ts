@@ -1,4 +1,4 @@
-import Product from "../models/product.model";
+import Product from "../classes/product";
 
 /**
  * Group Unique products based on keyGetter value
