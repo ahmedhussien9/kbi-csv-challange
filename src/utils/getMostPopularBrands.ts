@@ -8,6 +8,7 @@ import {
 } from "../interfaces/IBrand.interface";
 
 export default function mostPopularBrands(products: Product[]) {
+  
   const productsNames = groupUniqueProducts(
     products,
     (p: Product) => p.name

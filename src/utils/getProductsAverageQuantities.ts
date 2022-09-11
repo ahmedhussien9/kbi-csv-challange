@@ -5,7 +5,7 @@ import { IProductQuantitesGroup } from "./groupProductQuntites";
  * @param totalRecords
  * @returns
  */
-export default function (
+export default function getProductAverageQuantites(
   groupOfProductQuntites: IProductQuantitesGroup[],
   totalRecords: number
 ) {

@@ -1,5 +1,5 @@
 import groupProductBrand from "../utils/getMostPopularBrands";
-import groupProductQuantites, {
+import groupProductQuntities, {
   IProductQuantitesGroup,
 } from "../utils/groupProductQuntites";
 import productsAverages from "../utils/getProductsAverageQuantities";
@@ -15,7 +15,7 @@ export default class Order {
 
   getProductsQuantitesAverage() {
     const groupOfProductQuntites: IProductQuantitesGroup[] =
-      groupProductQuantites(this.orderProducts);
+      groupProductQuntities(this.orderProducts);
     const avgs = productsAverages(groupOfProductQuntites, this.totalRecords);
     return avgs;
   }
