@@ -28,32 +28,39 @@ After that you can watch the result through the termianl and if you want to chec
 ## input_example.csv
 
 ID944806,Willard Vista,Intelligent Copper Knife,3,Hilll-Gorczany
-
 ID644525,Roger Centers,Intelligent Copper Knife,1,Kunze-Bernhard
-
 ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros
-
 ID710139,Roger Centers,Intelligent Copper Knife,4,Hilll-Gorczany
-
 ID426632,Willa Hollow,Intelligent Copper Knife,4,Hilll-Gorczany
 
 ## 0_input_example.csv
-
 Intelligent Copper Knife,2.4
-
 Small Granite Shoes,0.8
 
 ## 1_input_example.csv
-
 Intelligent Copper Knife,Hilll-Gorczany
-
 Small Granite Shoes,Rowe and Legros
+
 
 ## Tests 
 ```sh
 npm run test
 ```
 
+
+## Challange 1 solution steps ( Average Product Quantities)
+- Grouped each product with all of their quanities 
+- Iterate over the group and calucalate their quanities / total order records
+- Example for Final results will be {name: 'shoes', 'averageQty': 2.5}
+- Finally, use csv writer for generating the output.
+
+## Challange 2 solution steps (Most Popular Brands)
+- Get product names as a unique list ['shoes', 'forks'];
+- Iterate over the product names.
+- Group each product name with their brands
+- get most popular product brand for each single product
+- generate list with the product name & the most popular brand
+- generate csv file with the end output.
 
 MIT
 
