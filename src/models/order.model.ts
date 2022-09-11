@@ -15,7 +15,6 @@ export default class Order {
     averageProductQuntity() {
         const groupOfProductQuntites: IProductGroup[] = groupProductQuntities(this.orderProducts);
         const avgs = productsAverages(groupOfProductQuntites, this.totalRecords);
-        console.log(avgs);
         return avgs;
     }
 
