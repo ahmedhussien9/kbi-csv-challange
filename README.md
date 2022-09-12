@@ -50,9 +50,9 @@ Small Granite Shoes,Rowe and Legros
    ```sh
    npm run start:dev
    ```
-- In the files folder you'll find a file called input_example.csv which has the product records.
+- In the files folder you'll find a file called input_example.csv which has the product records, and two other files for the output.
 - Enter your test data, however make sure to enter the same structure coloumns. 
-- Finally, adding the data and the application up and running you'll find the output will be printed directly in the two files 0_input_example.csv and 1_input_example.csv
+- Finally, After adding the test data you'll find the output will be printed directly in the two files 0_input_example.csv and 1_input_example.csv
 
 
 ## Tests 
