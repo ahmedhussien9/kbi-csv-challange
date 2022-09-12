@@ -20,12 +20,14 @@ cd kbi-csv-challange
 npm i
 npm run start:dev
 ```
+
 After that you can watch the result through the termianl and if you want to check the input & output files you can check the files folder you'll find the below files:
- - input_example.csv (the input csv data) like below.
+ - input_example.csv (the input csv data)..
  - 0_input_example.csv (The first output for product average quantites ).
  - 1_input_example.csv (The second output for the most popular brands ).
 
-## input_example.csv
+
+## files/input_example.csv
 
 ID944806,Willard Vista,Intelligent Copper Knife,3,Hilll-Gorczany
 ID644525,Roger Centers,Intelligent Copper Knife,1,Kunze-Bernhard
@@ -33,13 +35,24 @@ ID348204,Roger Centers,Small Granite Shoes,4,Rowe and Legros
 ID710139,Roger Centers,Intelligent Copper Knife,4,Hilll-Gorczany
 ID426632,Willa Hollow,Intelligent Copper Knife,4,Hilll-Gorczany
 
-## 0_input_example.csv
+## files/0_input_example.csv
 Intelligent Copper Knife,2.4
 Small Granite Shoes,0.8
 
-## 1_input_example.csv
+## files/1_input_example.csv
 Intelligent Copper Knife,Hilll-Gorczany
 Small Granite Shoes,Rowe and Legros
+
+
+## How it works
+
+- The program should be up and running by using the below command
+   ```sh
+   npm run start:dev
+   ```
+- In the files folder you'll find a file called input_example.csv which has the product records.
+- Enter your test data, however make sure to enter the same structure coloumns. 
+- Finally, adding the data and the application up and running you'll find the output will be printed directly in the two files 0_input_example.csv and 1_input_example.csv
 
 
 ## Tests 
